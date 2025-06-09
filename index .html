@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Moringa Magic® | #1 USA Health Solution | 75% OFF Today!</title>
     <meta name="description" content="Moringa Magic: The #1 natural supplement for Americans over 35. Boost energy, relieve joint pain, strengthen immunity, and lose weight. 75% OFF + Free Shipping Now!">
+    <link rel="preload" href="file_00000000c78c61f7868d723a6dca4216.webp" as="image">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
@@ -51,7 +53,7 @@
             100% { transform: scale(1); }
         }
         .hero {
-            background: linear-gradient(rgba(42,93,35,0.9), rgba(42,93,35,0.7)), url('https://images.unsplash.com/photo-1591453089846-0f339731a0e5');
+            background: linear-gradient(rgba(42,93,35,0.9), rgba(42,93,35,0.7)), url('optimized-bg.jpg');
             background-size: cover;
             background-position: center;
             color: var(--text-white);
@@ -73,6 +75,9 @@
             font-size: 1.2em;
             margin-bottom: 15px;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .hero img {
+            object-fit: contain;
         }
         .limited-offer {
             background: var(--highlight);
@@ -269,6 +274,10 @@
             .testimonial-card { flex-direction: column; text-align: center; }
             .weight-loss-card { max-width: 120px; }
             .weight-loss-card img { height: 120px; }
+            .hero img { max-width: 250px; }
+        }
+        @media (max-width: 400px) {
+            .hero img { max-width: 200px; }
         }
     </style>
 </head>
@@ -288,7 +297,12 @@
         <h1>🇺🇸 Moringa Magic: #1 Natural Solution for Americans Over 35</h1>
         <h3>Boost Energy, Relieve Joint Pain, Strengthen Immunity, and Lose Weight!</h3>
         <div class="limited-offer">Limited Offer: 75% OFF Today Only!</div>
-        <img src="EZ0YSLQ6.png" alt="Moringa Magic Product" srcset="EZ0YSLQ6-300w.png 300w, EZ0YSLQ6-600w.png 600w" sizes="(max-width: 600px) 100vw, 600px" style="max-width: 300px; margin: 15px auto; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        <picture>
+            <source srcset="file_00000000c78c61f7868d723a6dca4216.webp" type="image/webp">
+            <img src="file_00000000c78c61f7868d723a6dca4216.png" 
+                 alt="Moringa Magic Product" 
+                 style="max-width: 300px; margin: 15px auto; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        </picture>
         <a href="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" class="watch-button">
             <i class="fas fa-play-circle"></i> Watch Now
         </a>
@@ -437,8 +451,8 @@
         <p>© 2025 Moringa Magic | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
     </div>
 
-    <script>
-        // Real-Time Updates (Minimized)
+    <script defer>
+        // Real-Time Updates
         let orderCount = 1283;
         let stock = 47;
         setInterval(() => {
